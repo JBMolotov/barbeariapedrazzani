@@ -395,7 +395,11 @@ img {
 /* Header */
 header {
   background-color: var(--header-bg);
+<<<<<<< HEAD
   padding: 20px 0;
+=======
+  padding: 0;
+>>>>>>> develop
   position: fixed;
   width: 100%;
   top: var(--access-bar-height); /* Adjusted for access bar */
@@ -408,6 +412,7 @@ header .container {
   align-items: center;
 }
 
+<<<<<<< HEAD
 .logo h1 {
   font-size: 1.8rem;
   line-height: 1;
@@ -420,6 +425,12 @@ header .container {
   letter-spacing: 4px;
   display: block;
   text-align: center;
+=======
+.logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+>>>>>>> develop
 }
 
 .nav-links {
@@ -456,6 +467,18 @@ header .container {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+.sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+>>>>>>> develop
 /* Hero Section */
 .hero {
   height: 100vh;

@@ -16,7 +16,15 @@
   </head>
   <body>
     <!-- Accessibility Bar -->
+<<<<<<< HEAD
     <div class="accessibility-bar">
+=======
+    <div
+      class="accessibility-bar"
+      role="region"
+      aria-label="Barra de acessibilidade"
+    >
+>>>>>>> develop
       <div class="container">
         <ul class="access-links">
           <li><a href="#home" accesskey="1">Ir para o conteúdo [1]</a></li>
@@ -26,6 +34,7 @@
           <li><a href="#contato" accesskey="5">Ir para o contato [5]</a></li>
         </ul>
         <div class="access-controls">
+<<<<<<< HEAD
           <button id="btn-font-decrease" title="Diminuir fonte">A-</button>
           <button id="btn-font-increase" title="Aumentar fonte">A+</button>
           <button id="btn-contrast" title="Alto Contraste">
@@ -33,6 +42,39 @@
           </button>
           <div class="daltonism-control">
             <select id="daltonism-select" title="Opções de Daltonismo">
+=======
+          <button
+            id="btn-font-decrease"
+            title="Diminuir fonte"
+            aria-label="Diminuir tamanho da fonte"
+            data-a11y-action="font-decrease"
+          >
+            A-
+          </button>
+          <button
+            id="btn-font-increase"
+            title="Aumentar fonte"
+            aria-label="Aumentar tamanho da fonte"
+            data-a11y-action="font-increase"
+          >
+            A+
+          </button>
+          <button
+            id="btn-contrast"
+            title="Alto Contraste"
+            aria-pressed="false"
+            aria-label="Ativar alto contraste"
+            data-a11y-action="contrast-toggle"
+          >
+            <i class="fas fa-adjust"></i>
+          </button>
+          <div class="daltonism-control">
+            <select
+              id="daltonism-select"
+              title="Opções de Daltonismo"
+              aria-label="Opções de daltonismo"
+            >
+>>>>>>> develop
               <option value="normal">Normal</option>
               <option value="protanopia">Protanopia</option>
               <option value="deuteranopia">Deuteranopia</option>
@@ -45,6 +87,7 @@
     </div>
 
     <!-- Header -->
+<<<<<<< HEAD
     <header>
       <div class="container">
         <div class="logo">
@@ -53,6 +96,25 @@
         </div>
         <nav>
           <ul class="nav-links">
+=======
+    <header role="banner">
+      <div class="container">
+        <div class="logo">
+          <img
+            src="assets/logo_semfundo.png"
+            alt="Logotipo Barbearia Pedrazzani"
+            style="width: 150px; height: auto"
+          />
+        </div>
+        <nav>
+          <ul
+            id="primary-nav"
+            class="nav-links"
+            role="navigation"
+            aria-label="Navegação principal"
+            aria-hidden="true"
+          >
+>>>>>>> develop
             <li><a href="#home">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#servicos">Serviços</a></li>
@@ -67,13 +129,24 @@
               >
             </li>
           </ul>
+<<<<<<< HEAD
           <div class="hamburger">
+=======
+          <div
+            class="hamburger"
+            role="button"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+>>>>>>> develop
             <i class="fas fa-bars"></i>
           </div>
         </nav>
       </div>
     </header>
 
+<<<<<<< HEAD
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-overlay"></div>
@@ -295,6 +368,237 @@
 
     <!-- Footer -->
     <footer id="contato">
+=======
+    <!-- Main content landmark -->
+    <main id="maincontent" role="main" tabindex="-1">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h2>
+            Melhorando a sua <span class="highlight">auto estima</span> desde
+            2016
+          </h2>
+          <p>
+            Mais que um corte, um ritual. Venha viver a experiência Pedrazzani.
+          </p>
+          <div class="hero-btns">
+            <a href="#" class="btn btn-primary open-booking">Agendar Horário</a>
+            <a href="#planos" class="btn btn-outline">Conheça o Clube</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre -->
+      <section id="sobre" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nossa História</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                Desde 2016, a <strong>Barbearia Pedrazzani</strong> tem sido
+                referência em São Carlos, trazendo um conceito moderno de
+                barbearia que respeita as tradições clássicas.
+              </p>
+              <p>
+                Nosso objetivo vai além de apenas cortar cabelo e fazer barba.
+                Nós cuidamos da sua imagem e do seu bem-estar. Com um ambiente
+                acolhedor, profissionais altamente qualificados e workshops
+                constantes, garantimos que você saia da nossa cadeira com a auto
+                estima renovada.
+              </p>
+              <ul class="features-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Profissionais experientes
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Ambiente climatizado e
+                  descontraído
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Atendimento para todas as
+                  gerações
+                </li>
+              </ul>
+            </div>
+            <div class="about-image">
+              <!-- Placeholder image based on description -->
+              <img
+                src="./assets/about-barbershop.jpg"
+                alt="Daniel Pedrazzani posando em uma foto com um cliente de costas com um corte estilizado metade branco e metade preto juntando a um ying yang"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Destaque / Clube -->
+      <section id="planos" class="section bg-dark">
+        <div class="container">
+          <div class="promo-card">
+            <div class="promo-content">
+              <h3>CLUBE PEDRAZZANI</h3>
+              <h2>CORTE ILIMITADO</h2>
+              <p class="price">R$ 79,99<span>/mês</span></p>
+              <p>
+                Corte o cabelo quantas vezes quiser! Mantenha o visual sempre em
+                dia com nosso plano exclusivo.
+              </p>
+              <a
+                href="https://wa.me/5516991410938?text=Quero%20saber%20mais%20sobre%20o%20plano%20ilimitado"
+                class="btn btn-primary"
+                >Assinar Agora</a
+              >
+            </div>
+            <div class="promo-image">
+              <img
+                src="./assets/promo-corte.jpg"
+                alt="Informações sobre o pacote vip, texto contém o valor de R$ 79,99 por mês incluindo corte ilimitado"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Serviços -->
+      <section id="servicos" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nossos Serviços</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <i class="fas fa-cut"></i>
+              <h3>Corte de Cabelo</h3>
+              <p>
+                Do clássico ao moderno, degradês perfeitos e tesoura afiada.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-user-tie"></i>
+              <h3>Barba & Bigode</h3>
+              <p>
+                Barboterapia com toalha quente e produtos de alta qualidade.
+              </p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-spray-can"></i>
+              <h3>Tratamentos</h3>
+              <p>Hidratação, pigmentação e cuidados com o couro cabeludo.</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-graduation-cap"></i>
+              <h3>Workshops</h3>
+              <p>
+                Eventos educativos e troca de ideias para a comunidade de
+                barbeiros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unidades -->
+      <section id="unidades" class="section bg-dark">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nossas Unidades</h2>
+            <p>Encontre a Pedrazzani mais próxima de você em São Carlos - SP</p>
+            <div class="divider"></div>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <h3>Loja 01</h3>
+              <p class="neighborhood">Cidade Jardim</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Alameda%20das%20Azal%C3%A9ias%2C%20335%20-%20Cidade%20Jardim%2C%20S%C3%A3o%20Carlos%20-%20SP%2C%2013566-500"
+                class="location-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver Loja 1 no mapa: Alameda das Azaléias, 335"
+                ><i class="fas fa-map-marker-alt"></i> Ver no mapa</a
+              >
+              <a
+                href="https://sites.appbarber.com.br/barbeariapedraz-hb5q"
+                class="location-book"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar na Loja 1"
+                >Agendar na Loja</a
+              >
+            </div>
+            <div class="location-card">
+              <h3>Loja 02</h3>
+              <p class="neighborhood">Vila Celina</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=R.%20Prof.%20Jos%C3%A9%20Ferraz%20Camargo%2C%20181%20-%20Sala%201%20-%20Vila%20Celina%2C%20S%C3%A3o%20Carlos%20-%20SP%2C%2012566-440"
+                class="location-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver Loja 2 no mapa: R. Prof. José Ferraz Camargo, 181 - Sala 1"
+                ><i class="fas fa-map-marker-alt"></i> Ver no mapa</a
+              >
+              <a
+                href="https://sites.appbarber.com.br/barbeariapedraz-71lt"
+                class="location-book"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar na Loja 2"
+                >Agendar na Loja</a
+              >
+            </div>
+            <div class="location-card">
+              <h3>Loja 03</h3>
+              <p class="neighborhood">Vila Nery</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=R.%20Primo%20Lazarini%2C%20150%20-%20sala%20A%20-%20Jd%20nossa%20senhora%20de%20fatima%2C%20S%C3%A3o%20Carlos%20-%20SP%2C%2013567-200"
+                class="location-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver Loja 3 no mapa: R. Primo Lazarini, 150 - sala A"
+                ><i class="fas fa-map-marker-alt"></i> Ver no mapa</a
+              >
+              <a
+                href="https://sites.appbarber.com.br/agendamento/barbeariapedraz-wpt0"
+                class="location-book"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar na Loja 3"
+                >Agendar na Loja</a
+              >
+            </div>
+            <div class="location-card">
+              <h3>Loja 04</h3>
+              <p class="neighborhood">Vila Prado</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=R.%20Des.%20J%C3%BAlio%20de%20Faria%2C%20888B%20-%20Vila%20Prado%2C%20S%C3%A3o%20Carlos%20-%20SP%2C%2013574-250"
+                class="location-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver Loja 4 no mapa: R. Des. Júlio de Faria, 888B"
+                ><i class="fas fa-map-marker-alt"></i> Ver no mapa</a
+              >
+              <a
+                href="https://sites.appbarber.com.br/barbeariapedraz-tekl"
+                class="location-book"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar na Loja 4"
+                >Agendar na Loja</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato" role="contentinfo">
+>>>>>>> develop
       <div class="container footer-content">
         <div class="footer-brand">
           <h2>PEDRAZZANI</h2>
@@ -321,6 +625,17 @@
       </div>
     </footer>
 
+<<<<<<< HEAD
+=======
+    <!-- Live region for a11y status messages -->
+    <div
+      id="a11y-status"
+      aria-live="polite"
+      aria-atomic="true"
+      class="sr-only"
+    ></div>
+
+>>>>>>> develop
     <!-- Booking Modal -->
     <div
       id="booking-modal"
@@ -338,7 +653,11 @@
         <ul class="booking-list">
           <li>
             <a
+<<<<<<< HEAD
               href="https://sites.appbarber.com.br/barbeariapedraz-hb5"
+=======
+              href="https://sites.appbarber.com.br/barbeariapedraz-hb5q"
+>>>>>>> develop
               target="_blank"
               rel="noopener noreferrer"
               >Loja 1 — Cidade Jardim</a
