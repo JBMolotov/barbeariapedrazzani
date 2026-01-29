@@ -344,6 +344,18 @@ img {
   margin: 15px auto 0;
 }
 
+.inauguration-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-darker);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -585,6 +597,75 @@ header .container {
   filter: grayscale(0%);
 }
 
+/* Price List Styling */
+.price-list-container {
+  background-color: var(--bg-light);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.price-list-title {
+  text-align: center;
+  color: var(--primary-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.price-list {
+  list-style: none;
+  width: 100%;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.price-item .service-name {
+  font-weight: 600;
+  color: var(--text-light);
+  position: relative;
+  z-index: 1;
+  padding-right: 5px;
+  background-color: var(--bg-light); /* Hide dots behind text */
+}
+
+.price-item .dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted var(--text-gray);
+  margin-bottom: 7px; /* Align with text baseline */
+  opacity: 0.5;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.price-item .service-price {
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-left: 5px;
+  background-color: var(--bg-light); /* Hide dots behind text */
+}
+
+/* Adjust layout for about section to accommodate the table */
+.about-grid {
+  align-items: start; /* Align top since table might differ in height */
+}
+
 /* Promo / Clube Section */
 .promo-card {
   background-color: var(--bg-light);
@@ -798,7 +879,76 @@ footer {
   .nav-links.active {
     transform: translateY(0);
   }
+}
+/* Inauguration Event Styles */
+.inauguration-image-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  position: relative;
+  transition: all 0.3s ease;
+  animation: party-pulse 2s infinite ease-in-out;
+}
 
+.inauguration-image-container:hover {
+  transform: scale(1.02);
+}
+
+.inauguration-image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 215, 0, 0.3) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: shimmer 2.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes party-pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    border-color: var(--primary-color);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+    border-color: #fff;
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    border-color: var(--primary-color);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* High Contrast Override */
+body.high-contrast .inauguration-image-container::after {
+  display: none;
+}
+body.high-contrast .inauguration-image-container {
+  animation: none;
+  border: 4px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
   .hamburger {
     display: block;
   }
@@ -823,6 +973,7 @@ footer {
     padding: 40px 20px;
   }
 }
+
 
 /* Mobile-specific tweaks (do not change desktop styles) */
 @media (max-width: 480px) {
@@ -894,11 +1045,12 @@ footer {
     flex-direction: column;
   }
   .promo-image {
-    height: 220px;
+    height: auto;
   }
   .promo-image img {
-    height: 220px;
-    object-fit: cover;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
   }
 
   .services-grid {

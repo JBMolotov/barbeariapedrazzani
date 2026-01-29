@@ -164,43 +164,43 @@ document.addEventListener("DOMContentLoaded", () => {
   // Booking modal functionality
   const bookingModal = document.getElementById("booking-modal");
   const openBookingBtns = document.querySelectorAll(".open-booking");
-  const modalClose = bookingModal
-    ? bookingModal.querySelector(".modal-close")
-    : null;
-  const modalOverlay = bookingModal
-    ? bookingModal.querySelector(".modal-overlay")
-    : null;
-
-  function openBookingModal() {
-    if (!bookingModal) return;
-    bookingModal.setAttribute("aria-hidden", "false");
-    // set focus to first link
-    const firstLink = bookingModal.querySelector(".booking-list a");
-    if (firstLink) firstLink.focus();
-  }
+  const modalClose = bookingModal?.querySelector(".modal-close");
+  const modalOverlay = bookingModal?.querySelector(".modal-overlay");
 
   let lastFocused = null;
-  function openBookingModal() {
+
+  function openModal() {
     if (!bookingModal) return;
     lastFocused = document.activeElement;
     bookingModal.setAttribute("aria-hidden", "false");
-    // set focus to first link
+    
+    // Set focus to the first link inside the modal for accessibility
     const firstLink = bookingModal.querySelector(".booking-list a");
     if (firstLink) firstLink.focus();
+    
     if (a11yStatus) a11yStatus.textContent = "Modal de agendamento aberto";
   }
 
-  function closeBookingModal() {
+  function closeModal() {
     if (!bookingModal) return;
     bookingModal.setAttribute("aria-hidden", "true");
     if (lastFocused) lastFocused.focus();
     if (a11yStatus) a11yStatus.textContent = "Modal de agendamento fechado";
   }
-  if (modalClose) modalClose.addEventListener("click", closeBookingModal);
-  if (modalOverlay) modalOverlay.addEventListener("click", closeBookingModal);
 
-  // Close on Escape
+  // Attach click events to all "open-booking" buttons
+  openBookingBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent default anchor behavior
+      openModal();
+    });
+  });
+
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
+
+  // Close on Escape key
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeBookingModal();
+    if (e.key === "Escape") closeModal();
   });
 });
