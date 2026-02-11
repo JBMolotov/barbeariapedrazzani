@@ -764,8 +764,8 @@ header .container {
 /* Locations Section */
 .locations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
 }
 
 .location-card {
@@ -795,6 +795,225 @@ header .container {
 
 .location-link:hover {
   color: var(--primary-color);
+}
+
+/* Reviews / Avaliações Section */
+#avaliacoes .reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+#avaliacoes .review-card {
+  background-color: var(--bg-light);
+  padding: 28px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #333;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#avaliacoes .review-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+  letter-spacing: 0.6px;
+}
+
+#avaliacoes .review-card p {
+  color: var(--text-gray);
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+#avaliacoes .review-card a.btn-outline {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  display: inline-block;
+}
+
+#avaliacoes .review-card a.btn-outline:hover {
+  background: var(--primary-color);
+  color: var(--bg-darker);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+/* Make sure badges and small labels match site style */
+.review-badge {
+  display: inline-block;
+  background: rgba(255, 215, 0, 0.12);
+  color: var(--primary-color);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  #avaliacoes .reviews-grid {
+    gap: 18px;
+  }
+
+  #avaliacoes .review-card {
+    padding: 20px;
+  }
+}
+
+/* Breakpoints to ensure up to 5 columns when space allows */
+@media (min-width: 700px) {
+  .locations-grid,
+  #avaliacoes .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .locations-grid,
+  #avaliacoes .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .locations-grid,
+  #avaliacoes .reviews-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .locations-grid,
+  #avaliacoes .reviews-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Creative enhancements for review cards */
+#avaliacoes .review-card.highlight {
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(255,215,0,0.02));
+  border: 1px solid rgba(255,215,0,0.12);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.5), 0 2px 0 rgba(255,215,0,0.02) inset;
+}
+
+#avaliacoes .review-card {
+  transform-origin: center bottom;
+  transition: transform 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.28s;
+}
+
+#avaliacoes .review-card:hover {
+  transform: translateY(-10px) rotate(-0.5deg) scale(1.02);
+  box-shadow: 0 26px 52px rgba(0,0,0,0.6);
+}
+
+.stars {
+  color: #f5c518; /* gold stars */
+  margin: 6px 0 10px;
+}
+.stars i { margin-right: 4px; }
+
+.google-btn i {
+  margin-right: 8px;
+  color: #db4437; /* Google red for icon */
+}
+
+.google-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-desc {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+.new-label {
+  background: linear-gradient(90deg,var(--primary-color),var(--primary-dark));
+  color: var(--bg-darker);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  margin-left: 8px;
+}
+
+/* subtle entrance animation */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(24px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+#avaliacoes .review-card { animation: cardIn 420ms ease both; }
+
+/* Slight stagger for visual rhythm */
+#avaliacoes .review-card:nth-child(1) { animation-delay: 0ms; }
+#avaliacoes .review-card:nth-child(2) { animation-delay: 60ms; }
+#avaliacoes .review-card:nth-child(3) { animation-delay: 120ms; }
+#avaliacoes .review-card:nth-child(4) { animation-delay: 180ms; }
+#avaliacoes .review-card:nth-child(5) { animation-delay: 240ms; }
+
+/* Testimonials carousel styles */
+.testimonials {
+  margin-bottom: 28px;
+  /* full-bleed: span from edge to edge */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 18px 0; /* vertical spacing */
+  overflow: hidden; /* hide native scrollbar */
+  background: linear-gradient(180deg, rgba(255,215,0,0.02), transparent 40%);
+}
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+  /* no native scroll; movement controlled by JS via transform */
+}
+.testimonial-card {
+  min-width: 420px; /* cards largos */
+  max-width: 520px;
+  background: linear-gradient(180deg, var(--bg-light), rgba(30,30,30,0.96));
+  border-radius: 12px;
+  padding: 20px 22px;
+  border: 1px solid #2e2e2e;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.testimonial-card .t-head { display:flex; justify-content:space-between; align-items:center; }
+.testimonial-card .t-head time { color: var(--text-gray); font-size: 0.85rem; }
+.testimonial-card .t-text { color: var(--text-light); font-size: 0.98rem; }
+.testimonial-card .owner-response { background: rgba(255,255,255,0.02); border-left: 3px solid rgba(255,215,0,0.14); padding: 10px; border-radius: 6px; }
+.testimonial-card .owner-response { display: none; }
+
+.t-author {
+  text-align: left;
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+/* Keep the testimonials as a horizontal scroller even on large screens
+   so the infinite auto-scroll effect remains active. Cards are wide;
+   on very large viewports multiple cards will be visible at once but
+   the container still scrolls horizontally. */
+@media (max-width: 480px) {
+  .testimonial-card { min-width: 300px; max-width: 340px; }
 }
 
 /* Footer */

@@ -203,4 +203,58 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
   });
+
+  // Infinite horizontal testimonials carousel
+  function initInfiniteTestimonials() {
+    const tracks = document.querySelectorAll('.testimonial-track');
+    tracks.forEach(track => {
+      const speed = 0.6; // pixels per frame (tweakable)
+      const originalItems = Array.from(track.children);
+      if (originalItems.length === 0) return;
+
+      if (track.dataset.infinite === 'true') return;
+
+      // measure width of original content
+      const originalWidth = originalItems.reduce((w, node) => w + node.getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0), 0);
+
+      // Clone original nodes to allow seamless scrolling
+      originalItems.forEach(node => track.appendChild(node.cloneNode(true)));
+      track.dataset.infinite = 'true';
+
+      let offset = 0;
+      let rafId = null;
+      let paused = false;
+
+      // Use transform to move the track left; keep track as a flex row of items
+      function step() {
+        if (!paused) {
+          offset -= speed;
+          // reset when we've moved past the original width
+          if (Math.abs(offset) >= originalWidth) {
+            offset += originalWidth;
+          }
+          track.style.transform = `translateX(${offset}px)`;
+        }
+        rafId = requestAnimationFrame(step);
+      }
+
+      // Pause on hover/focus
+      track.addEventListener('mouseenter', () => { paused = true; });
+      track.addEventListener('mouseleave', () => { paused = false; });
+      track.addEventListener('focusin', () => { paused = true; });
+      track.addEventListener('focusout', () => { paused = false; });
+
+      // Make sure the track doesn't get focusable children stealing keyboard scroll
+      track.setAttribute('tabindex', '0');
+
+      // Start
+      rafId = requestAnimationFrame(step);
+
+      // cleanup
+      window.addEventListener('unload', () => cancelAnimationFrame(rafId));
+    });
+  }
+
+  // Initialize when DOM ready
+  initInfiniteTestimonials();
 });

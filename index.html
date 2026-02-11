@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -93,7 +93,7 @@
           >
             <li><a href="#home">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
             <li><a href="#unidades">Unidades</a></li>
             <li>
               <a
@@ -138,9 +138,8 @@
         </div>
       </section>
 
-
-
-      <!-- Inauguration Event Section -->
+      <!-- Inauguration Event Section (comentada) -->
+      <!--
       <section id="inauguracao-destaque" class="section bg-darker" style="padding: 40px 0; border-bottom: 1px solid #333;">
         <div class="container" style="text-align: center;">
           <div class="section-header" style="margin-bottom: 30px;">
@@ -158,6 +157,7 @@
           </div>
         </div>
       </section>
+      -->
 
       <!-- Sobre -->
       <section id="sobre" class="section">
@@ -256,7 +256,7 @@
           <div class="promo-card">
             <div class="promo-content">
               <h3 class="price-list-title">– CLUB ILIMITADO –</h3>
-              <ul class="price-list" style="margin-bottom: 30px;">
+              <ul class="price-list" style="margin-bottom: 30px">
                 <li class="price-item">
                   <span class="service-name">Cabelo</span>
                   <span class="dots"></span>
@@ -273,7 +273,14 @@
                   <span class="service-price">149,99</span>
                 </li>
               </ul>
-              <p style="margin-bottom: 30px; text-align: center; font-style: italic; color: var(--text-gray);">
+              <p
+                style="
+                  margin-bottom: 30px;
+                  text-align: center;
+                  font-style: italic;
+                  color: var(--text-gray);
+                "
+              >
                 Assine e use quantas vezes quiser durante o mês!
               </p>
               <a
@@ -288,45 +295,6 @@
                 src="./assets/promo-corte.jpg"
                 alt="Informações sobre o pacote vip de barba e cabelo, texto contém o valor de R$ 149,99 por mês"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Serviços -->
-      <section id="servicos" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2>Nossos Serviços</h2>
-            <div class="divider"></div>
-          </div>
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fas fa-cut"></i>
-              <h3>Corte de Cabelo</h3>
-              <p>
-                Do clássico ao moderno, degradês perfeitos e tesoura afiada.
-              </p>
-            </div>
-            <div class="service-card">
-              <i class="fas fa-user-tie"></i>
-              <h3>Barba & Bigode</h3>
-              <p>
-                Barboterapia com toalha quente e produtos de alta qualidade.
-              </p>
-            </div>
-            <div class="service-card">
-              <i class="fas fa-spray-can"></i>
-              <h3>Tratamentos</h3>
-              <p>Hidratação, pigmentação e cuidados com o couro cabeludo.</p>
-            </div>
-            <div class="service-card">
-              <i class="fas fa-graduation-cap"></i>
-              <h3>Workshops</h3>
-              <p>
-                Eventos educativos e troca de ideias para a comunidade de
-                barbeiros.
-              </p>
             </div>
           </div>
         </div>
@@ -426,7 +394,6 @@
               >
             </div>
             <div class="location-card">
-              <span class="inauguration-badge">Inauguração 08/02</span>
               <h3>Loja 05</h3>
               <p class="neighborhood">Jockey Club</p>
               <a
@@ -438,12 +405,388 @@
                 ><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                 <span>Ver no mapa</span></a
               >
-              <span class="location-book" style="opacity: 0.7; cursor: default;">Em breve</span>
+              <a
+                href="https://sites.appbarber.com.br/barbeariapedraz-zzzw"
+                class="location-book new"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar na Loja 5  Jockey Club"
+                >Agendar na Loja (Nova)</a
+              >
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Avaliações -->
+    <section id="avaliacoes" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Avaliações</h2>
+          <p>A sua opinião importa:</p>
+          <div class="divider"></div>
+        </div>
+        <!-- Testimonials carousel (user feedbacks) -->
+        <div class="testimonials" aria-label="Depoimentos de clientes">
+          <div class="testimonial-track">
+            <article class="testimonial-card">
+              <div class="t-author">Joelma</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">
+                Ótimo atendimento, profissionalismo e serviço de qualidade. Meu
+                irmão sempre corta e elogia muito. Recomendamos demais.
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="t-author">Murillo</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">
+                Ótimo atendimento e recepção, fui atendido pelo barbeiro
+                Fernando e gostei muito do corte e do atendimento ...recomendo a
+                conhecerem.
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="t-author">Willian</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">
+                Excelente experiência, lugar agradável e excelentes
+                profissionais. Recomendo.
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="t-author">Dalbert</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">
+                Ótimo atendimento sem falar na qualidade de organização 👏👏 …
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="t-author">Anderson</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">
+                Atendimento muito profissional, gosto muito do trampo dos cara
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="t-author">Marta</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">
+                Barbearia com ótimos profissionais, levei meu neto e ele foi
+                muito bem atendido...recomendo
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="t-author">Mateus</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">
+                Lugar maneiro. Só barbeiro de qualidade. Sempre saio na régua.
+              </p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="t-author">Danilo</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">Otimo atendimento e corte excelente</p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="t-author">Gustavo</div>
+              <div class="t-head">
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="t-text">
+                Muito bom, barbeiros muito atenciosos e muito profissionais
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div>
+              <span class="review-badge">Loja 01</span>
+              <h3>Cidade Jardim</h3>
+              <div class="stars" aria-hidden="true">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <a
+              href="https://g.page/r/CQn6kGbx3amgEBE/review"
+              class="btn btn-outline google-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-google"></i> Avaliar no Google</a
+            >
+          </div>
+
+          <div class="review-card">
+            <div>
+              <span class="review-badge">Loja 02</span>
+              <h3>Vila Celina</h3>
+              <div class="stars" aria-hidden="true">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <a
+              href="https://g.page/r/CQPHRXfhJfA4EBE/review"
+              class="btn btn-outline google-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-google"></i> Avaliar no Google</a
+            >
+          </div>
+
+          <div class="review-card">
+            <div>
+              <span class="review-badge">Loja 03</span>
+              <h3>Vila Nery</h3>
+              <div class="stars" aria-hidden="true">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <a
+              href="https://g.page/r/Cd4K73scAfaKEBE/review"
+              class="btn btn-outline google-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-google"></i> Avaliar no Google</a
+            >
+          </div>
+
+          <div class="review-card">
+            <div>
+              <span class="review-badge">Loja 04</span>
+              <h3>Vila Prado</h3>
+              <div class="stars" aria-hidden="true">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <a
+              href="https://g.page/r/Ca8pO5fEafWQEBE/review"
+              class="btn btn-outline google-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-google"></i> Avaliar no Google</a
+            >
+          </div>
+
+          <div class="review-card highlight">
+            <div>
+              <span class="review-badge">Loja 05</span>
+              <h3>Jockey Club <small class="new-label">(Nova)</small></h3>
+              <div class="stars" aria-hidden="true">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <a
+              href="https://g.page/r/CSYfmUnzKmTdEBI/review"
+              class="btn btn-outline google-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-google"></i> Avaliar no Google</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unidades -->
+    <section id="unidades" class="section bg-dark">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nossas Unidades</h2>
+          <p>Encontre a Pedrazzani mais próxima de você em São Carlos - SP</p>
+          <div class="divider"></div>
+        </div>
+        <div class="locations-grid">
+          <div class="location-card">
+            <h3>Loja 01</h3>
+            <p class="neighborhood">Cidade Jardim</p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Alameda%20das%20Azal%C3%A9ias%2C%20335%20-%20Cidade%20Jardim%2C%20S%C3%A3o%20Carlos%20-%20SP%2C%2013566-500"
+              class="location-link btn-map"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Loja 1 no mapa: Alameda das Azaléias, 335"
+              ><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>Ver no mapa</span></a
+            >
+            <a
+              href="https://sites.appbarber.com.br/barbeariapedraz-hb5q"
+              class="location-book"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Agendar na Loja 1"
+              >Agendar na Loja</a
+            >
+          </div>
+          <div class="location-card">
+            <h3>Loja 02</h3>
+            <p class="neighborhood">Vila Celina</p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=R.%20Prof.%20Jos%C3%A9%20Ferraz%20Camargo%2C%20181%20-%20Sala%201%20-%20Vila%20Celina%2C%20S%C3%A3o%20Carlos%20-%20SP%2C%2012566-440"
+              class="location-link btn-map"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Loja 2 no mapa: R. Prof. José Ferraz Camargo, 181 - Sala 1"
+              ><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>Ver no mapa</span></a
+            >
+            <a
+              href="https://sites.appbarber.com.br/barbeariapedraz-71lt"
+              class="location-book"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Agendar na Loja 2"
+              >Agendar na Loja</a
+            >
+          </div>
+          <div class="location-card">
+            <h3>Loja 03</h3>
+            <p class="neighborhood">Vila Nery</p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=R.%20Primo%20Lazarini%2C%20150%20-%20sala%20A%20-%20Jd%20nossa%20senhora%20de%20fatima%2C%20S%C3%A3o%20Carlos%20-%20SP%2C%2013567-200"
+              class="location-link btn-map"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Loja 3 no mapa: R. Primo Lazarini, 150 - sala A"
+              ><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>Ver no mapa</span></a
+            >
+            <a
+              href="https://sites.appbarber.com.br/agendamento/barbeariapedraz-wpt0"
+              class="location-book"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Agendar na Loja 3"
+              >Agendar na Loja</a
+            >
+          </div>
+          <div class="location-card">
+            <h3>Loja 04</h3>
+            <p class="neighborhood">Vila Prado</p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=R.%20Des.%20J%C3%BAlio%20de%20Faria%2C%20888B%20-%20Vila%20Prado%2C%20S%C3%A3o%20Carlos%20-%20SP%2C%2013574-250"
+              class="location-link btn-map"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Loja 4 no mapa: R. Des. Júlio de Faria, 888B"
+              ><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>Ver no mapa</span></a
+            >
+            <a
+              href="https://sites.appbarber.com.br/barbeariapedraz-tekl"
+              class="location-book"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Agendar na Loja 4"
+              >Agendar na Loja</a
+            >
+          </div>
+          <div class="location-card">
+            <h3>Loja 05</h3>
+            <p class="neighborhood">Jockey Club</p>
+            <a
+              href="https://maps.app.goo.gl/CDqy4yC6zMVf2HKM6"
+              class="location-link btn-map"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Loja 5 no mapa: Rua Rio Amazonas 268"
+              ><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>Ver no mapa</span></a
+            >
+            <a
+              href="https://sites.appbarber.com.br/barbeariapedraz-zzzw"
+              class="location-book new"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Agendar na Loja 5  Jockey Club"
+              >Agendar na Loja (Nova)</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contato" role="contentinfo">
@@ -513,7 +856,7 @@
               href="https://sites.appbarber.com.br/barbeariapedraz-hb5q"
               target="_blank"
               rel="noopener noreferrer"
-              >Loja 1 — Cidade Jardim</a
+              >Loja 1 Cidade Jardim</a
             >
           </li>
           <li>
@@ -521,7 +864,7 @@
               href="https://sites.appbarber.com.br/barbeariapedraz-71lt"
               target="_blank"
               rel="noopener noreferrer"
-              >Loja 2 — Vila Celina</a
+              >Loja 2 Vila Celina</a
             >
           </li>
           <li>
@@ -529,7 +872,7 @@
               href="https://sites.appbarber.com.br/agendamento/barbeariapedraz-wpt0"
               target="_blank"
               rel="noopener noreferrer"
-              >Loja 3 — Vila Nery</a
+              >Loja 3 Vila Nery</a
             >
           </li>
           <li>
@@ -537,13 +880,16 @@
               href="https://sites.appbarber.com.br/barbeariapedraz-tekl"
               target="_blank"
               rel="noopener noreferrer"
-              >Loja 4 — Vila Prado</a
+              >Loja 4 Vila Prado</a
             >
           </li>
           <li>
-            <span style="color: var(--text-gray); display: block; padding: 10px 12px; background: var(--bg-light); border-radius: 6px;">
-              Loja 5 — Jockey Club <strong style="color: var(--primary-color)">(Inauguração 08/02)</strong>
-            </span>
+            <a
+              href="https://sites.appbarber.com.br/barbeariapedraz-zzzw"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Loja 5 Jockey Club (Nova)</a
+            >
           </li>
         </ul>
       </div>
